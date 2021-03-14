@@ -44,3 +44,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 To configure hot reload create env (.env) file with:
 
     FAST_REFRESH=false
+
+* [issue](https://github.com/facebook/create-react-app/issues/9904#issuecomment-735216381)
