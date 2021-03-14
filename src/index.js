@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Board from './Board'
 import './index.css'
 
 class Game extends React.Component {
@@ -62,57 +63,6 @@ class Game extends React.Component {
             xIsNext: (step % 2) === 0
         })
     }
-}
-
-class Board extends React.Component {
-   
-    renderSquare(i) {
-        return <Square value={this.props.squares[i]}
-        onClick={()=> this.props.onClick(i)}
-        />
-    }
-   
-    render() {
-       
-        
-        return (
-            <div>
-                <div className="board-row">
-                    {this.renderSquare(0)}
-                    {this.renderSquare(1)}
-                    {this.renderSquare(2)}
-                </div>
-                <div className="board-row">
-                    {this.renderSquare(3)}
-                    {this.renderSquare(4)}
-                    {this.renderSquare(5)}
-                </div>
-                <div className="board-row">
-                    {this.renderSquare(6)}
-                    {this.renderSquare(7)}
-                    {this.renderSquare(8)}
-                </div>
-            </div>
-        )
-    }
-}
-
-// class Square extends React.Component {
-//     render() {
-//         return (
-//             <button className="square" onClick={() => this.props.onClick()}>
-//                 {this.props.value}
-//             </button>
-//         )
-//     }
-// }
-
-function Square(props) {
-    return (
-        <button className="square" onClick={() => props.onClick()}>
-            {props.value}
-        </button>
-    )
 }
 
 ReactDOM.render(
